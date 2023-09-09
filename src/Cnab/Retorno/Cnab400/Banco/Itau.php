@@ -199,7 +199,8 @@ class Itau extends AbstractRetorno implements RetornoCnab400
             ->setAgencia($this->rem(27, 30, $header))
             ->setConta($this->rem(33, 37, $header))
             ->setContaDv($this->rem(38, 38, $header))
-            ->setData($this->rem(95, 100, $header));
+            ->setData($this->rem(95, 100, $header))
+            ->setNumeroSequencialArquivo($this->rem(109, 113, $header));;
 
         return true;
     }

@@ -55,6 +55,11 @@ class Header implements HeaderContract
     protected $codigoCliente;
 
     /**
+     * @var string
+     */
+    protected $numeroSequencialArquivo;
+
+    /**
      * @return string
      */
     public function getOperacaoCodigo()
@@ -274,6 +279,26 @@ class Header implements HeaderContract
     public function setCodigoCliente($codigoCliente)
     {
         $this->codigoCliente = ltrim(trim($codigoCliente, ' '), '0');
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNumeroSequencialArquivo()
+    {
+        return $this->numeroSequencialArquivo;
+    }
+
+    /**
+     *
+     * @param string $numeroSequencialArquivo
+     * @return $this
+     */
+    public function setNumeroSequencialArquivo($numeroSequencialArquivo)
+    {
+        $this->numeroSequencialArquivo = $numeroSequencialArquivo;
 
         return $this;
     }
