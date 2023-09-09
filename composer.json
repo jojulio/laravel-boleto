@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jojulio\\LaravelBoleto\\": "src"
+            "Eduardokum\\LaravelBoleto\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jojulio\\LaravelBoleto\\Tests\\": "tests"
+            "Eduardokum\\LaravelBoleto\\Tests\\": "tests"
         }
     },
     "config": {
