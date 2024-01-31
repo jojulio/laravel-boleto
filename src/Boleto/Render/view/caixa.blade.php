@@ -20,7 +20,7 @@
             </div>
         @endif
 
-        <div class="info-empresa">
+        {{--<div class="info-empresa">
             @if ($logo)
                 <div style="display: inline-block;">
                     <img alt="logo" src="{{ $logo_base64 }}" />
@@ -32,7 +32,7 @@
                 <div>{{ $beneficiario['endereco'] }}</div>
                 <div>{{ $beneficiario['endereco2'] }}</div>
             </div>
-        </div>
+        </div>--}}
         <br>
 
         <table class="table-boleto" cellpadding="0" cellspacing="0" border="0">

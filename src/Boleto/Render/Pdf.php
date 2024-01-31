@@ -105,24 +105,24 @@ class Pdf extends AbstractPdf implements PdfContract
      */
     protected function logoEmpresa($i)
     {
-        $this->Ln(2);
-        $this->SetFont($this->PadraoFont, '', $this->fdes);
-
-        $logo = preg_replace('/\&.*/', '', $this->boleto[$i]->getLogo());
-        $ext = pathinfo($logo, PATHINFO_EXTENSION);
-
-        if ($this->boleto[$i]->getLogo() && !empty($this->boleto[$i]->getLogo())) {
-            $this->Image($this->boleto[$i]->getLogo(), 20, ($this->GetY()), 0, 12, $ext);
-        }
-        $this->Cell(56);
-        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getNome()), 0, 1);
-        $this->Cell(56);
-        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getDocumento(), '##.###.###/####-##'), 0, 1);
-        $this->Cell(56);
-        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getEndereco()), 0, 1);
-        $this->Cell(56);
-        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getCepCidadeUf()), 0, 1);
-        $this->Ln(8);
+//        $this->Ln(2);
+//        $this->SetFont($this->PadraoFont, '', $this->fdes);
+//
+//        $logo = preg_replace('/\&.*/', '', $this->boleto[$i]->getLogo());
+//        $ext = pathinfo($logo, PATHINFO_EXTENSION);
+//
+//        if ($this->boleto[$i]->getLogo() && !empty($this->boleto[$i]->getLogo())) {
+//            $this->Image($this->boleto[$i]->getLogo(), 20, ($this->GetY()), 0, 12, $ext);
+//        }
+//        $this->Cell(56);
+//        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getNome()), 0, 1);
+//        $this->Cell(56);
+//        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getDocumento(), '##.###.###/####-##'), 0, 1);
+//        $this->Cell(56);
+//        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getEndereco()), 0, 1);
+//        $this->Cell(56);
+//        $this->Cell(0, $this->desc, $this->_($this->boleto[$i]->getBeneficiario()->getCepCidadeUf()), 0, 1);
+//        $this->Ln(8);
 
         return $this;
     }
